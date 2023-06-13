@@ -1,4 +1,5 @@
-﻿using RetailApp.Utility;
+﻿using RetailApp.DesktopUI.Fiscal;
+using RetailApp.Utility;
 using RetailApp.ViewModels.Fiscal;
 using System.Windows;
 
@@ -27,7 +28,9 @@ namespace RetailApp.DesktopUI
 
         private void meiFiscal_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Click ok!");
+            frmInvoiceList frmInvoiceList = new frmInvoiceList();
+            frmInvoiceList.Owner = this;
+            bool? result = frmInvoiceList.ShowDialog();
         }
     }
 }

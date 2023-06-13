@@ -7,7 +7,7 @@
     Title="Retail App"
     Width="800"
     Height="450"
-    FontSize="18"
+    FontSize="16"
     Loaded="Window_Loaded"
     WindowState="Maximized"
     mc:Ignorable="d">
