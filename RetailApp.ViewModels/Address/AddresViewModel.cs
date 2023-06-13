@@ -8,6 +8,6 @@
         public string StreetAditionalInformation { get; set; } = default!;
         public string Neighborhood { get; set; } = default!;
         public string ZipCode { get; set; } = default!;
-        public CityViewModel CityViewModel { get; set; } = default!;
+        public CityViewModel CityViewModel { get; set; }
     }
 }
