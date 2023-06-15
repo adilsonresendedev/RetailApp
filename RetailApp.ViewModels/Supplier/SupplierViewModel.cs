@@ -1,9 +1,10 @@
 ﻿using RetailApp.ViewModels.Address;
 using RetailApp.ViewModels.Phone;
+using System.Collections.Generic;
 
 namespace RetailApp.ViewModels.Suplier
 {
-    public class SuplierViewModel
+    public class SupplierViewModel
     {
         public int IdSuplier { get; set; }
         public string CNPJ { get; set; } = default!;

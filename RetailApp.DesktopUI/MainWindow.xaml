@@ -7,15 +7,16 @@
     Title="Retail App"
     Width="800"
     Height="450"
-    FontSize="16"
     Loaded="Window_Loaded"
     WindowState="Maximized"
     mc:Ignorable="d">
     <Grid>
         <Menu
             Name="menPrincipal"
-            Height="20"
-            VerticalAlignment="Top">
+            Height="auto"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            FontSize="16">
             <MenuItem Name="meiRegiters" Header="Cadastro">
                 <MenuItem Name="meiClient" Header="Cliente" />
                 <MenuItem Name="meiProduct" Header="Produto" />
