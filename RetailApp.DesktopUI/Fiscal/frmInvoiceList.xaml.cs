@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RetailApp.DesktopUI.Register;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,9 @@ namespace RetailApp.DesktopUI.Fiscal
 
         private void btnImport_Click(object sender, RoutedEventArgs e)
         {
-
+            SupplierEdit supplierEdit = new SupplierEdit();
+            supplierEdit.Owner = this;
+            bool? result = supplierEdit.ShowDialog();
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)

@@ -7,8 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="frmInvoiceList"
     Width="auto"
-    Height="450"
-    FontSize="16"
+    Height="auto "
+    FontSize="14"
+    SizeToContent="WidthAndHeight"
     WindowStartupLocation="CenterOwner"
     mc:Ignorable="d">
     <Grid>
@@ -67,6 +68,8 @@
         <DataGrid
             Name="dgvInvoice"
             Grid.Row="1"
+            Width="auto"
+            Height="350px"
             Margin="10" />
 
         <StackPanel
