@@ -12,8 +12,4 @@
     <ProjectReference Include="..\RetailApp.ViewModels\RetailApp.ViewModels.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Register\" />
-  </ItemGroup>
-
 </Project>

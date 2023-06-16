@@ -14,8 +14,9 @@
     <Grid>
         <Menu
             Name="menPrincipal"
-            Height="20"
-            VerticalAlignment="Top">
+            Height="auto"
+            VerticalAlignment="Top"
+            FontSize="14">
             <MenuItem Name="meiRegiters" Header="Cadastro">
                 <MenuItem Name="meiClient" Header="Cliente" />
                 <MenuItem Name="meiProduct" Header="Produto" />
