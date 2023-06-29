@@ -124,18 +124,49 @@
                 VerticalAlignment="Center"
                 Text="{Binding CRT, Mode=TwoWay}" />
         </StackPanel>
-        <DataGrid
-            Name="dtgAdress"
+        <GroupBox
             Grid.Row="3"
-            Width="auto"
-            Height="100px"
-            Margin="10" />
-        <DataGrid
-            Name="dtgPhone"
+            Margin="10"
+            Header="Endereços">
+            <DataGrid
+                Name="dtgAdress"
+                Width="auto"
+                Height="100px"
+                AlternatingRowBackground="LightGray"
+                AutoGenerateColumns="False"
+                BorderBrush="Black"
+                VerticalGridLinesBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding MainAdress, Mode=TwoWay}" Header="Principal" />
+                    <DataGridTextColumn Binding="{Binding StreetName, Mode=TwoWay}" Header="Rua" />
+                    <DataGridTextColumn Binding="{Binding StreetNumber, Mode=TwoWay}" Header="Número" />
+                    <DataGridTextColumn Binding="{Binding StreetAditionalInformation, Mode=TwoWay}" Header="Informação adicional" />
+                    <DataGridTextColumn Binding="{Binding Neighborhood, Mode=TwoWay}" Header="Bairro" />
+                    <DataGridTextColumn Binding="{Binding ZipCode, Mode=TwoWay}" Header="CEP" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.CityName, Mode=TwoWay}" Header="Cidade" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.State, Mode=TwoWay}" Header="Estado" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.CountryViewModel.CountryName, Mode=TwoWay}" Header="País" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox
             Grid.Row="4"
-            Width="auto"
-            Height="100px"
-            Margin="10" />
+            Margin="10"
+            Header="Telefones">
+            <DataGrid
+                Name="dtgPhone"
+                Width="auto"
+                Height="100px"
+                AlternatingRowBackground="LightGray"
+                AutoGenerateColumns="False"
+                BorderBrush="Black"
+                VerticalGridLinesBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding MainPhone, Mode=TwoWay}" Header="Principal" />
+                    <DataGridTextColumn Binding="{Binding PhoneNumber, Mode=TwoWay}" Header="telefone" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
         <StackPanel
             x:Name="stpActions"
             Grid.Row="5"

@@ -30,6 +30,8 @@ namespace RetailApp.DesktopUI.Register
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.DataContext = _supplierViewModel;
+            dtgAdress.ItemsSource = _supplierViewModel.addresViewModel;
+            dtgPhone.ItemsSource = _supplierViewModel.PhoneViewModel;
         }
     }
 }
