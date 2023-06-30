@@ -3,6 +3,7 @@
     public class AddresViewModel
     {
         public int IdAdress { get; set; }
+        public bool MainAdress { get; set; }
         public string StreetName { get; set; } = default!;
         public string StreetNumber { get; set; } = default!;
         public string StreetAditionalInformation { get; set; } = default!;

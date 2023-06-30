@@ -6,11 +6,11 @@
     xmlns:local="clr-namespace:RetailApp.DesktopUI.Register"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Editar Fornecedor"
-    Width="auto"
+    Width="1024"
     Height="auto"
     FontSize="14"
     Loaded="Window_Loaded"
-    SizeToContent="WidthAndHeight"
+    SizeToContent="Height"
     WindowStartupLocation="CenterOwner"
     mc:Ignorable="d">
     <Grid x:Name="grdMain">
@@ -32,6 +32,7 @@
         <StackPanel
             Name="stpSupplierData1"
             Grid.Row="1"
+            HorizontalAlignment="Center"
             Orientation="Horizontal">
             <Label
                 Name="lblCNPJ"
@@ -58,7 +59,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Right"
-                Content="Name:" />
+                Content="Nome:" />
             <TextBox
                 Name="txtName"
                 Width="420"
@@ -71,6 +72,7 @@
         <StackPanel
             Name="stpSupplierData2"
             Grid.Row="2"
+            HorizontalAlignment="Center"
             Orientation="Horizontal">
             <Label
                 Name="lblIE"
@@ -124,18 +126,51 @@
                 VerticalAlignment="Center"
                 Text="{Binding CRT, Mode=TwoWay}" />
         </StackPanel>
-        <DataGrid
-            Name="dtgAdress"
+        <GroupBox
+            Name="grbAdress"
             Grid.Row="3"
-            Width="auto"
-            Height="100px"
-            Margin="10" />
-        <DataGrid
-            Name="dtgPhone"
+            Margin="10"
+            Header="Endereços">
+            <DataGrid
+                Name="dtgAdress"
+                Width="auto"
+                Height="100px"
+                AlternatingRowBackground="LightGray"
+                AutoGenerateColumns="False"
+                BorderBrush="Black"
+                VerticalGridLinesBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding MainAdress, Mode=TwoWay}" Header="Principal" />
+                    <DataGridTextColumn Binding="{Binding StreetName, Mode=TwoWay}" Header="Rua" />
+                    <DataGridTextColumn Binding="{Binding StreetNumber, Mode=TwoWay}" Header="Número" />
+                    <DataGridTextColumn Binding="{Binding StreetAditionalInformation, Mode=TwoWay}" Header="Informações Adicionais" />
+                    <DataGridTextColumn Binding="{Binding Neighborhood, Mode=TwoWay}" Header="Bairro" />
+                    <DataGridTextColumn Binding="{Binding ZipCode, Mode=TwoWay}" Header="CEP" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.CityName, Mode=TwoWay}" Header="Cidade" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.State, Mode=TwoWay}" Header="Estado" />
+                    <DataGridTextColumn Binding="{Binding Path=CityViewModel.CountryViewModel.CountryName, Mode=TwoWay}" Header="País" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox
+            Name="grbPhones"
             Grid.Row="4"
-            Width="auto"
-            Height="100px"
-            Margin="10" />
+            Margin="10"
+            Header="Telefones">
+            <DataGrid
+                Name="dtgPhone"
+                Width="auto"
+                Height="100px"
+                AlternatingRowBackground="LightGray"
+                AutoGenerateColumns="False"
+                BorderBrush="Black"
+                VerticalGridLinesBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn Binding="{Binding MainPhone, Mode=TwoWay}" Header="Principal" />
+                    <DataGridTextColumn Binding="{Binding PhoneNumber, Mode=TwoWay}" Header="Telefone" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
         <StackPanel
             x:Name="stpActions"
             Grid.Row="5"
