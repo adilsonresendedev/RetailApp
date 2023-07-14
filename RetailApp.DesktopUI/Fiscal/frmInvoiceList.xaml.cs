@@ -32,7 +32,7 @@ namespace RetailApp.DesktopUI.Fiscal
         {
             SupplierViewModel supplierViewModel = new SupplierViewModel
             {
-                Name = "Nome do fornecedor",
+                Name = "Gitflow2",
                 ComercialName = "Fornecedor",
                 CNPJ = "74405915000113",
                 IE = "844334130001",
