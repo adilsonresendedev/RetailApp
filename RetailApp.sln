@@ -3,11 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.DesktopUI", "RetailApp.DesktopUI\RetailApp.DesktopUI.csproj", "{D6421851-11C1-4F2E-BD09-1881BA1C9AB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RetailApp.DesktopUI", "RetailApp.DesktopUI\RetailApp.DesktopUI.csproj", "{D6421851-11C1-4F2E-BD09-1881BA1C9AB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.ViewModels", "RetailApp.ViewModels\RetailApp.ViewModels.csproj", "{723AFBE7-FFD6-4239-BE7E-F92F9A6BA26E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RetailApp.ViewModels", "RetailApp.ViewModels\RetailApp.ViewModels.csproj", "{723AFBE7-FFD6-4239-BE7E-F92F9A6BA26E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Utility", "RetailApp.Utility\RetailApp.Utility.csproj", "{AFBD1B6C-0B82-4E67-9667-178F17F630CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RetailApp.Utility", "RetailApp.Utility\RetailApp.Utility.csproj", "{AFBD1B6C-0B82-4E67-9667-178F17F630CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.API", "RetailApp.API\RetailApp.API.csproj", "{EC7EF04A-9CA2-49D9-AC2A-77B4C5D31CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.DTOs", "RetailApp.DTOs\RetailApp.DTOs.csproj", "{262CF4A1-4B18-4B66-8B05-9CC506DAB257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Business", "RetailApp.Business\RetailApp.Business.csproj", "{F4DAF23D-7DAF-4A97-B6B9-476649A31D00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Entities", "RetailApp.Entities\RetailApp.Entities.csproj", "{B8C9969E-DF99-483C-9B83-48C46F16458B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Shared", "RetailApp.Shared\RetailApp.Shared.csproj", "{B81ADFAC-3FB6-4B29-A7E2-B4FE00A46B47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Services", "RetailApp.Services\RetailApp.Services.csproj", "{45A8647E-3B61-4CC1-9C0C-4F6BBB06D205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailApp.Data", "RetailApp.Data\RetailApp.Data.csproj", "{4B858C41-BE9C-4B90-872A-564343B1290C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +41,34 @@ Global
 		{AFBD1B6C-0B82-4E67-9667-178F17F630CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFBD1B6C-0B82-4E67-9667-178F17F630CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFBD1B6C-0B82-4E67-9667-178F17F630CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7EF04A-9CA2-49D9-AC2A-77B4C5D31CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7EF04A-9CA2-49D9-AC2A-77B4C5D31CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7EF04A-9CA2-49D9-AC2A-77B4C5D31CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7EF04A-9CA2-49D9-AC2A-77B4C5D31CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262CF4A1-4B18-4B66-8B05-9CC506DAB257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262CF4A1-4B18-4B66-8B05-9CC506DAB257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262CF4A1-4B18-4B66-8B05-9CC506DAB257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262CF4A1-4B18-4B66-8B05-9CC506DAB257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DAF23D-7DAF-4A97-B6B9-476649A31D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DAF23D-7DAF-4A97-B6B9-476649A31D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DAF23D-7DAF-4A97-B6B9-476649A31D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DAF23D-7DAF-4A97-B6B9-476649A31D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8C9969E-DF99-483C-9B83-48C46F16458B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8C9969E-DF99-483C-9B83-48C46F16458B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8C9969E-DF99-483C-9B83-48C46F16458B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8C9969E-DF99-483C-9B83-48C46F16458B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81ADFAC-3FB6-4B29-A7E2-B4FE00A46B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81ADFAC-3FB6-4B29-A7E2-B4FE00A46B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81ADFAC-3FB6-4B29-A7E2-B4FE00A46B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81ADFAC-3FB6-4B29-A7E2-B4FE00A46B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45A8647E-3B61-4CC1-9C0C-4F6BBB06D205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A8647E-3B61-4CC1-9C0C-4F6BBB06D205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A8647E-3B61-4CC1-9C0C-4F6BBB06D205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A8647E-3B61-4CC1-9C0C-4F6BBB06D205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B858C41-BE9C-4B90-872A-564343B1290C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B858C41-BE9C-4B90-872A-564343B1290C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B858C41-BE9C-4B90-872A-564343B1290C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B858C41-BE9C-4B90-872A-564343B1290C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
