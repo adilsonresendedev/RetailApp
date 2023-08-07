@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RetailApp.Business\RetailApp.Business.csproj" />
+    <ProjectReference Include="..\RetailApp.ViewModels\RetailApp.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>

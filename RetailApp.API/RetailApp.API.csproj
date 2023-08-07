@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RetailApp.Services\RetailApp.Services.csproj" />
     <ProjectReference Include="..\RetailApp.ViewModels\RetailApp.ViewModels.csproj" />
   </ItemGroup>
 
