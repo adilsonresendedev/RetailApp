@@ -1,9 +1,10 @@
-﻿using RetailApp.ViewModels.Fiscal;
+﻿using RetailApp.ViewModels;
+using RetailApp.ViewModels.Fiscal;
 
 namespace RetailApp.Services.Interfaces
 {
     public interface IInvoiceService
     {
-        InvoiceViewModel GetInvoiceViewModelByXML(string xml);
+        ResponseViewModel<InvoiceViewModel> GetInvoiceViewModelByXML(string xml);
     }
 }

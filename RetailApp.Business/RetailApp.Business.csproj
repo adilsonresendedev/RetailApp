@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RetailApp.Utility\RetailApp.Utility.csproj" />
     <ProjectReference Include="..\RetailApp.ViewModels\RetailApp.ViewModels.csproj" />
   </ItemGroup>
 

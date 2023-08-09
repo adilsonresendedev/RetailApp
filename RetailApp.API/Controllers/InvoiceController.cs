@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RetailApp.Services;
 using RetailApp.Services.Interfaces;
+using RetailApp.ViewModels;
 using RetailApp.ViewModels.Fiscal;
 using System.Xml;
 
@@ -17,19 +18,14 @@ namespace RetailApp.API.Controllers
             _invoiceService = invoiceService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetViewModelByXML()
+        [HttpPost]
+        [Route("get-view-model-by-xml")]
+        [ProducesResponseType(typeof(ResponseViewModel<InvoiceViewModel>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ResponseViewModel<InvoiceViewModel>), StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> GetViewModelByXML([FromBody] RequestViewModel<string> requestViewModel)
         {
-            XmlDocument xmlDocument = new XmlDocument();
-            InvoiceViewModel invoiceViewModel = _invoiceService.GetInvoiceViewModelByXML(xmlDocument.OuterXml);
-            return Ok(invoiceViewModel);
+            ResponseViewModel<InvoiceViewModel> responseViewModel = _invoiceService.GetInvoiceViewModelByXML(requestViewModel.Data);
+            return StatusCode((int)responseViewModel.StatusCode, responseViewModel);
         }
-
-        //[HttpGet]
-        //public async Task<IActionResult> GetViewModelByXML([FromBody] XmlDocument xmlDocument)
-        //{
-        //    InvoiceViewModel invoiceViewModel = _invoiceService.GetInvoiceViewModelByXML(xmlDocument.OuterXml);
-        //    return Ok(invoiceViewModel);
-        //}
     }
 }

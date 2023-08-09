@@ -1,6 +1,8 @@
 ﻿using RetailApp.Business.Interfaces;
 using RetailApp.Services.Interfaces;
+using RetailApp.ViewModels;
 using RetailApp.ViewModels.Fiscal;
+using System.Net;
 
 namespace RetailApp.Services
 {
@@ -11,10 +13,21 @@ namespace RetailApp.Services
         {
             _invoiceBusiness = invoiceBusiness;
         }
-        public InvoiceViewModel GetInvoiceViewModelByXML(string xml)
+
+        public ResponseViewModel<InvoiceViewModel> GetInvoiceViewModelByXML(string xml)
         {
-            InvoiceViewModel invoiceViewModel = _invoiceBusiness.GetInvoiceViewModelByXML(xml);
-            return invoiceViewModel;
+            ResponseViewModel<InvoiceViewModel> responseViewModel = new ResponseViewModel<InvoiceViewModel>(HttpStatusCode.OK);
+            try
+            {
+                InvoiceViewModel invoiceViewModel = _invoiceBusiness.GetInvoiceViewModelByXML(xml);
+                responseViewModel.Data = invoiceViewModel;
+            }
+            catch (Exception ex)
+            {
+                responseViewModel = new ResponseViewModel<InvoiceViewModel>(ex);
+            }
+
+            return responseViewModel;
         }
     }
 }

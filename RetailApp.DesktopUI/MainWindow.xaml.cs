@@ -20,11 +20,11 @@ namespace RetailApp.DesktopUI
             
         }
 
-        private void ImportXML()
-        {
-            string xmlContent = FileUtility.GetStringFromXml();
-            nfeProc nfeProc = XmlUtility.XmlToClass<nfeProc>(xmlContent);
-        }
+        //private void ImportXML()
+        //{
+        //    string xmlContent = FileUtility.GetStringFromXml();
+        //    nfeProc nfeProc = XmlUtility.XmlToClass<nfeProc>(xmlContent);
+        //}
 
         private void meiFiscal_Click(object sender, RoutedEventArgs e)
         {
