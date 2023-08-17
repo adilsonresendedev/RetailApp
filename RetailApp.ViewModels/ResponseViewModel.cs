@@ -5,6 +5,10 @@ namespace RetailApp.ViewModels
 {
     public class ResponseViewModel<T>
     {
+        public ResponseViewModel()
+        {
+            
+        }
         public ResponseViewModel(HttpStatusCode httpStatusCode)
         {
             IsSuccess = true;

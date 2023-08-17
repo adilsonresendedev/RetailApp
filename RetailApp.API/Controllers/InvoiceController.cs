@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RetailApp.Services;
 using RetailApp.Services.Interfaces;
 using RetailApp.ViewModels;
 using RetailApp.ViewModels.Fiscal;
-using System.Xml;
 
 namespace RetailApp.API.Controllers
 {
