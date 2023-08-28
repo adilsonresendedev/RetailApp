@@ -1,6 +1,6 @@
 ﻿namespace RetailApp.Entities
 {
-    public class Class1
+    public class Supplier
     {
 
     }

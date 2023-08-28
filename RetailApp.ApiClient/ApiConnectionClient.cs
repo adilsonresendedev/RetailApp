@@ -27,6 +27,42 @@ namespace RetailApp.ApiClient
             return responseViewModel;
         }
 
+        public async Task<ResponseViewModel<T>> GetAsync<T>(string url)
+        {
+            ResponseViewModel<T> responseViewModel = new ResponseViewModel<T>();
+
+            HttpResponseMessage httpResponseMessage = await _httpClient.GetAsync(url);
+            using (HttpContent httpContentResponse = httpResponseMessage.Content)
+            {
+                responseViewModel = await HandleResponse<T>(httpResponseMessage);
+            }
+
+            return responseViewModel;
+        }
+
+        public async Task<ResponseViewModel<T>> PutAsync<T, TDataToSend>(string url, TDataToSend dataToSend)
+        {
+            ResponseViewModel<T> responseViewModel = new ResponseViewModel<T>();
+            HttpContent httpContent = CreateHttpContet(dataToSend);
+            using (HttpResponseMessage httpResponseMessage = await _httpClient.PutAsync(url, httpContent))
+            {
+                responseViewModel = await HandleResponse<T>(httpResponseMessage);
+            }
+
+            return responseViewModel;
+        }
+
+        public async Task<ResponseViewModel<T>> DeleteAsync<T>(string url)
+        {
+            ResponseViewModel<T> responseViewModel = new ResponseViewModel<T>();
+            using (HttpResponseMessage httpResponseMessage = await _httpClient.DeleteAsync(url)
+            {
+                responseViewModel = await HandleResponse<T>(httpResponseMessage);
+            }
+
+            return responseViewModel;
+        }
+
         private HttpContent CreateHttpContet<TDataToSend>(TDataToSend dataToSend)
         {
             string jsonContent = JsonConvert.SerializeObject(dataToSend, Formatting.Indented);
