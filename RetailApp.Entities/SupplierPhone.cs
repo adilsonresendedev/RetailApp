@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace RetailApp.Entities
 {
-    internal class SupplierPhone
+    public class SupplierPhone : BaseEntity
     {
+        public int IdSupplier { get; set; }
+        public int IdPhone { get; set; }
+        public virtual Phone Phone { get; set; }
     }
 }

@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace RetailApp.Entities
 {
-    internal class SupplierAdress
+    public class SupplierAdress : BaseEntity
     {
+        public int IdSupplierAdress { get; set; }
+        public int IdSupplier { get; set; }
+        public int IdAdress { get; set; }
+        public virtual Address Address { get; set; }
     }
 }

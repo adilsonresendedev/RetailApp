@@ -1,5 +1,8 @@
+
+using Microsoft.EntityFrameworkCore;
 using RetailApp.Business;
 using RetailApp.Business.Interfaces;
+using RetailApp.Data.Context;
 using RetailApp.Services;
 using RetailApp.Services.Interfaces;
 
@@ -9,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));    
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IInvoiceService, InvoiceService>();
