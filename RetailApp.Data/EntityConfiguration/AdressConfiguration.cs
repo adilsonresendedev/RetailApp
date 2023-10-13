@@ -9,6 +9,8 @@ namespace RetailApp.Data.EntityConfiguration
         public void Configure(EntityTypeBuilder<Address> builder)
         {
             builder.HasKey(x => x.IdAdress);
+
+            //Adilson added some changes here;
         }
     }
 }
