@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RetailApp.Entities
+﻿namespace RetailApp.Entities
 {
-    internal class Address
+    public class Address
     {
+        public int IdAdress { get; set; }
+        public bool MainAdress { get; set; }
+        public string StreetName { get; set; } = default!;
+        public string StreetNumber { get; set; } = default!;
+        public string StreetAditionalInformation { get; set; } = default!;
+        public string Neighborhood { get; set; } = default!;
+        public string ZipCode { get; set; } = default!;
+        public string City { get; set; }
     }
 }

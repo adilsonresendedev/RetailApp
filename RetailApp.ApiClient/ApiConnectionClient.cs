@@ -55,7 +55,7 @@ namespace RetailApp.ApiClient
         public async Task<ResponseViewModel<T>> DeleteAsync<T>(string url)
         {
             ResponseViewModel<T> responseViewModel = new ResponseViewModel<T>();
-            using (HttpResponseMessage httpResponseMessage = await _httpClient.DeleteAsync(url)
+            using (HttpResponseMessage httpResponseMessage = await _httpClient.DeleteAsync(url))
             {
                 responseViewModel = await HandleResponse<T>(httpResponseMessage);
             }

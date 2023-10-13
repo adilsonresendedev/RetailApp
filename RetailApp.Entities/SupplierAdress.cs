@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RetailApp.Entities
+﻿namespace RetailApp.Entities
 {
-    internal class SupplierAdress
+    public class SupplierAdress
     {
+        public int IdSupplier { get; set; }
+        public int IdAdress { get; set; }
+        public Address Address { get; set; }
     }
 }
